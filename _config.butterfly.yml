@@ -795,7 +795,7 @@ preloader:
 # wordcount (字數統計)
 # see https://butterfly.js.org/posts/ceeb73f/#字數統計
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -880,12 +880,12 @@ snackbar:
 
 # https://instant.page/
 # prefetch (預加載)
-instantpage: false
+instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)
 pangu:
-  enable: false
+  enable: true
   field: site # site/post
 
 # Lazyload (图片懒加载)
@@ -899,13 +899,14 @@ lazyload:
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
-# pwa:
-#   enable: false
-#   manifest: /pwa/manifest.json
-#   apple_touch_icon: /pwa/apple-touch-icon.png
-#   favicon_32_32: /pwa/32.png
-#   favicon_16_16: /pwa/16.png
-#   mask_icon: /pwa/safari-pinned-tab.svg
+pwa:
+  enable: true
+  manifest: /manifest.json
+  # theme_color: '#212121'
+  apple_touch_icon: /img/siteicon/apple-touch-icon.png
+  favicon_32_32: /img/siteicon/favicon-32x32.png
+  favicon_16_16: /img/siteicon/favicon-16x16.png
+  mask_icon: /img/siteicon/apple-touch-icon.png
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/

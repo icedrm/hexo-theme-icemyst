@@ -12,6 +12,8 @@
     "version": "7.3.0"
   },
   "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-htmlmin": "^5.0.1",
     "hexo": "^7.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
@@ -24,6 +26,20 @@
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "hexo-wordcount": "^6.0.1",
+    "workbox-build": "^7.1.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2"
   }
 }
