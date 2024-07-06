@@ -62,13 +62,16 @@ avatar:
   effect: false
 
 # Disable all banner image
-disable_top_img: false
+disable_top_img: true
 
 # The banner image of home page
 index_img:
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
+    - https://pic3.zhimg.com/80/v2-2d27325d3ef53714bd457bc2c40e8852_1440w.webp
+    - https://pic4.zhimg.com/80/v2-5db05ca43bdb82d42f357cb581d384df_1440w.webp
+    - https://pic2.zhimg.com/v2-ef87585088748f4e087489aaa8dcecbd_r.jpg
 
 # The banner image of archive page
 archive_img:
@@ -115,18 +118,18 @@ error_404:
   background: https://pic.imgdb.cn/item/64c7bada1ddac507cc135dd8.jpg
 
 post_meta:
-  page: # Home Page
-    date_type: created # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
-    date_format: date # date/relative 顯示日期還是相對日期
-    categories: true # true or false 主頁是否顯示分類
-    tags: false # true or false 主頁是否顯示標籤
-    label: true # true or false 顯示描述性文字
+  page:
+    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_format: relative # date/relative 显示日期还是相对日期
+    categories: true # true or false 主页是否显示分类
+    tags: true # true or false 主页是否显示标签
+    label: true # true or false 显示描述性文字
   post:
-    date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
-    date_format: date # date/relative 顯示日期還是相對日期
-    categories: true # true or false 文章頁是否顯示分類
-    tags: true # true or false 文章頁是否顯示標籤
-    label: true # true or false 顯示描述性文字
+    date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
+    date_format: date # date/relative 显示日期还是相对日期
+    categories: true # true or false 文章页是否显示分类
+    tags: true # true or false 文章页是否显示标签
+    label: true # true or false 显示描述性文字
 
 # Display the article introduction on homepage
 # 1: description
@@ -134,7 +137,7 @@ post_meta:
 # 3: auto_excerpt (default)
 # false: do not show the article introduction
 index_post_content:
-  method: 3
+  method: 2
   length: 500 # if you set method to 2 or 3, the length need to config
 
 # anchor
@@ -148,11 +151,11 @@ anchor:
 photofigcaption: false
 
 # copy settings
-# copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
+# copyright: Add the copyright information after copied content (复制的內容后面加上版权信息)
 copy:
   enable: true
   copyright:
-    enable: false
+    enable: true
     limit_count: 50
 
 # Post
@@ -165,11 +168,11 @@ toc:
   number: true
   expand: false
   style_simple: false # for post
-  scroll_percent: true
+  scroll_percent: false
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true
   author_href:
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -179,12 +182,12 @@ reward:
   enable: false
   text:
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
-    # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+    - img: /img/wechat.webp
+      link:
+      text: 微信
+    - img: /img/alipay.webp
+      link:
+      text: 支付宝
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -209,12 +212,12 @@ post_pagination: 1
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
-  enable: false
+  enable: true
   style: flat # style: simple/flat
-  limit_day: 500 # When will it be shown
+  limit_day: 30 # When will it be shown
   position: top # position: top/bottom
-  message_prev: It has been
-  message_next: days since the last update, the content of the article may be outdated.
+  message_prev: 距离上次更新已经过去
+  message_next: 天了，文章内容可能已经过时。若内容或图片失效，请留言反馈（部分素材来自网络）。
 
 # Footer Settings
 # --------------------------------------
