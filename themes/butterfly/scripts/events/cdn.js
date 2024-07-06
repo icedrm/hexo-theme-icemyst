@@ -70,6 +70,8 @@ hexo.extend.filter.register('before_generate', () => {
         jsdelivr: `https://cdn.jsdelivr.net/npm/${name}${verType}/${min_file}`,
         unpkg: `https://unpkg.com/${name}${verType}/${file}`,
         cdnjs: `https://cdnjs.cloudflare.com/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}`,
+        onmicrosoft: `https://npm.onmicrosoft.cn/${name}${verType}/${file}`,
+        cbd: `https://cdn.cbd.int/${name}${verType}/${file}`,
         custom: (CDN.custom_format || '').replace(/\$\{(.+?)\}/g, (match, $1) => value[$1])
       }
 
