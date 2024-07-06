@@ -5,19 +5,33 @@
 nav:
   logo: # image
   display_title: true
-  fixed: false # fixed navigation bar
+  fixed: true # fixed navigation bar
 
 # Menu 目錄
 menu:
-  # Home: / || fas fa-home
-  # Archives: /archives/ || fas fa-archive
-  # Tags: /tags/ || fas fa-tags
-  # Categories: /categories/ || fas fa-folder-open
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
-  # Link: /link/ || fas fa-link
-  # About: /about/ || fas fa-heart
+  文 章:
+    隧道: /archives/ || fa-fw fas fa-archive
+    分类: /categories/ || fa-fw fas fa-cubes
+    标签: /tags/ || fa-fw fas fa-tags
+
+  统 计:
+    友人帐: /link/ || fas fa-link
+    朋友圈: /fcircles/ || fa-brands fa-artstation
+    统计表: /charts/ || fas fa-chart-line
+    留言板: /comments/ || fa-fw fas fa-envelope
+    清单: /todolist/ || fa-fw fas fa-table-list
+
+  我 的:
+    音乐馆: /music/?id=7657374410&server=tencent || fa-fw fas fa-music
+    追番页: /bangumis/ || fa-fw fa-brands fa-bilibili
+    相册集: /album/ || fa-fw fas fa-images
+    # 小空调: /air-conditioner/ || fas fa-fan
+    藏宝阁: /collect/ || fa-fw fas fa-box
+
+  关 于:
+    关于本人: /about/ || fa-fw fas fa-dragon
+    闲言碎语: /essay/ || fas fa-lightbulb
+    随便逛逛: javascript:toRandomPost() || fas fa-shoe-prints
 
 # Code Blocks (代碼相關)
 # --------------------------------------
