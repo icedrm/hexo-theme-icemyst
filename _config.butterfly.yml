@@ -96,9 +96,9 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
-  subtitle: 'Page Not Found'
-  background: https://i.loli.net/2020/05/19/aKOcLiyPl2JQdFD.png
+  enable: true
+  subtitle: '请尝试站内搜索寻找文章'
+  background: https://pic.imgdb.cn/item/64c7bada1ddac507cc135dd8.jpg
 
 post_meta:
   page: # Home Page
