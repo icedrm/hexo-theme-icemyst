@@ -1,0 +1,114 @@
+#nav #menus a:hover {
+    background: var(--default-bg-color);
+    border-radius: 25px;
+    box-shadow: 0 8px 12px -3px #49b1f523;
+}
+
+#blog-info > a {
+    display: inline-block;
+}
+
+/* 网站标题 */
+
+#nav .site-name::before {
+    display: none;
+    background-color: var(--default-bg-color) !important;
+    border-radius: 50px;
+    position: absolute;
+    padding: 0 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "\f015";
+    font-family: "Font Awesome 6 Free";
+    color: white;
+}
+
+#nav .site-name:hover::before {
+    display: block;
+    scale: 1.03;
+}
+
+/* 顶部按钮 */
+
+.mask-name-container {
+    font-weight: bold;
+    max-width: 1200px;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    transition: .3s;
+}
+
+#page-name::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '回到顶部';
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+    padding: 0 30px;
+    background-color: var(--default-bg-color);
+    box-shadow: 0 0 3px var(--default-bg-color);
+    transition: .3s;
+    display: none;
+}
+
+#page-name:hover:before {
+    display: block;
+}
+
+#name-container:hover {
+    /* scale: 1.03 */
+    transform: translateX(-50%) scale(1.03);
+    transition: .3s;
+}
+
+#name-container {
+    position: absolute;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    transform: translate(-50%, 60px);
+}
+
+#page-name {
+    position: relative;
+    -webkit-animation-timing-function: ease-out;
+    height: 100%;
+    display: flex;
+}
+
+.nav-fixed.nav-visible #name-container {
+    transition: .3s;
+    transform: translate(-50%, 60px);
+}
+
+.nav-fixed.nav-visible #menus .menus_items {
+    transform: translate(-50%);
+    transition: .3s;
+}
+
+.nav-fixed #menus .menus_items {
+    transform: translate(-50%, -60px);
+    transition: .3s;
+}
+
+.nav-fixed #name-container {
+    transform: translate(-50%);
+    transition: .3s;
+}
+.nav-fixed #page-header {
+    transform: translate(-50%, -60px);
+    transition: .3s;
+}
+
+@media (max-width: 768px) {
+    .mask-name-container {
+        display: none;
+    }
+}

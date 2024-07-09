@@ -108,7 +108,6 @@
       padding: 0 22px
 
   &.not-top-img
-    margin-bottom: 10px
     height: 60px
     background: 0
 
@@ -118,7 +117,6 @@
 
       a,
       .site-name
-        color: var(--font-color)
         text-shadow: none
 
   &.nav-fixed
@@ -129,6 +127,7 @@
       background: rgba(255, 255, 255, .8)
       box-shadow: 0 5px 6px -5px alpha($grey, .6)
       transition: transform .2s ease-in-out, opacity .2s ease-in-out
+      color: var(--font-color)
 
       #blog-info
         color: var(--font-color)
@@ -139,18 +138,13 @@
         .site-name
           text-shadow: none
 
-      a,
-      #toggle-menu
-        color: var(--font-color)
-        text-shadow: none
-
-        &:hover
-          color: $light-blue
-
     &.fixed
       #nav
         top: 0
         transition: all .5s
+        // outline: 1px solid #42444a
+        outline: 1px solid var(--dark-grey)
+        transform: translateZ(0)
 
   &.nav-visible:not(.fixed)
     #nav
@@ -182,19 +176,38 @@
 // for not top_img
 #post
   & > #post-info
+    z-index: 0
+    display: flex
+    position: relative
+    flex-direction: column
+    align-items: center
     margin-bottom: 30px
+    padding: 2rem 3rem
+    background-repeat: no-repeat
+    background-size: cover
+    border-radius: 8px
+    &:before
+      content: "";
+      width: 100%;
+      height: 100%;
+      z-index: -1
+      position: absolute;
+      border-radius: 8px;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .5);
 
     .post-title
       padding-bottom: 4px
       border-bottom: 1px solid var(--light-grey)
-      color: var(--text-highlight-color)
 
       .post-edit-link
         float: right
 
     #post-meta,
     #post-meta a
-      color: #78818a
+      text-align: center
+      color: var(--white)
 
 #post-info
   .post-title
@@ -242,8 +255,9 @@
           display: none
 
     a
-      color: var(--light-grey)
+      color: $text-hover
       transition: all .3s ease-out
+
 
       &:hover
         color: $text-hover
@@ -262,7 +276,7 @@
   padding: 0 36px
   width: 100%
   height: 60px
-  font-size: 1.3em
+  font-size: 1rem
   opacity: 0
   transition: all .5s
 
@@ -273,6 +287,8 @@
     opacity: 1
 
   #blog-info
+    font-size: 1.2rem
+    font-weight: bold
     flex: 1
     color: var(--light-grey)
     @extend .limit-one-line
@@ -291,9 +307,9 @@
       color: var(--white)
 
   a
-    color: var(--light-grey)
+    color: var(--font-color)
 
-    &:hover
+    &:hover:not(#blog-info a)
       color: var(--white)
 
   .site-name
@@ -301,46 +317,65 @@
     font-weight: bold
 
   .menus_items
-    display: inline
+    display: flex
+    height: -webkit-fill-available
+    align-items: center
+    justify-content: flex-end
+    top: 0
+    position: absolute
+    width: fit-content
+    left: 50%
+    transform: translateX(-50%)
+    font-weight: bold
 
     .menus_item
       position: relative
       display: inline-block
-      padding: 0 0 0 14px
+      padding: 0 14px
 
       &:hover
         .menus_item_child
           display: block
 
-        & > a > i:last-child
-          transform: rotate(180deg)
-
-      & > a > i:last-child
-        padding: 4px
-        transition: transform .3s
-
       .menus_item_child
         position: absolute
         right: 0
         display: none
-        margin-top: 8px
-        padding: 0
+        margin-top: 12.5px
+        padding: 5px 5px
         width: max-content
-        border-radius: 5px
+        border-radius: 50px
         background-color: var(--sidebar-bg)
         box-shadow: 0 5px 20px -4px rgba($dark-black, .5)
         animation: sub_menus .3s .1s ease both
 
+        li
+          display: flex
+          border-radius: 50px
+          transition: all .3s
+          margin: 0 3px
+
+        &:not(#sidebar-menus ul)
+          left:50%
+          translate:-50%
+
+          &:hover
+            border: 1px solid #49b1f5
+
         &:before
           position: absolute
-          top: -8px
+          top: -12.5px
           left: 0
           width: 100%
           height: 20px
           content: ''
 
-        li
+        li:not(#sidebar-menus li)
           list-style: none
+
+          &:not(#sidebar-menus li)
+            float: left
+            border-radius: 50px !important
 
           &:hover
             background: var(--text-bg-hover)
@@ -355,10 +390,15 @@
 
           a
             display: inline-block
-            padding: 8px 16px
+            padding: 3.5px 10px
             width: 100%
-            color: var(--font-color) !important
             text-shadow: none !important
+            border-radius: 50px
+
+            &:hover
+              padding: 3.5px 13px
+              transform: scale(1) !important
+              transition: .3s !important
 
   &.hide-menu
     #toggle-menu
@@ -377,12 +417,15 @@
     display: inline
     padding: 0 0 0 14px
 
+    > a
+      padding: .4em .4em
+
   .site-page
     position: relative
-    padding-bottom: 6px
     text-shadow: 1px 1px 2px rgba($dark-black, .3)
-    font-size: .78em
     cursor: pointer
+    padding: .4em .8em
+    border-radius: 50px
 
     &:not(.child)
       &:after
@@ -392,7 +435,7 @@
         z-index: -1
         width: 0
         height: 3px
-        background-color: lighten($theme-color, 30%)
+        // background-color: lighten($theme-color, 30%)
         content: ''
         transition: all .3s ease-in-out
 
