@@ -9,9 +9,9 @@ body:
         重要：請依照該模板來提交 
         Please follow the template to create a new issue
   - type: input
-    id: butterfly-ver
+    id: icemyst-ver
     attributes:
-      label: 使用的 Butterfly 版本？ | What version of Butterfly are you use?
+      label: 使用的 Icemyst 版本？ | What version of Butterfly are you use?
       description: 檢視主題的 package.json | Check the theme's package.json
     validations:
       required: true

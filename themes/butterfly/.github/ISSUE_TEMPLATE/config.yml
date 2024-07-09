@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Questions about Butterfly
-    url: https://github.com/jerryc127/hexo-theme-butterfly/discussions
+  - name: Questions about Icemyst
+    url: https://github.com/icemyst/hexo-theme-icemyst/discussions
     about: 一些使用問題請到 Discussion 詢問。 Please ask questions in Discussion.
 
   - name: Butterfly Q&A
@@ -9,10 +9,10 @@ contact_links:
     about: Butterfly Q&A
 
   - name: Telegram
-    url: https://t.me/bu2fly
+    url: https://t.me/icemyst
     about: 'Official Telegram Group'
 
   - name: QQ 群
-    url: https://jq.qq.com/?_wv=1027&k=KU9105XR
-    about: '群號 1070540070'
+    url: https://jq.qq.com/?_wv=1027&k=617Ln51sCmh-QkaIl8cYf03kXdT0f8vo
+    about: '群號 347512871'
 
