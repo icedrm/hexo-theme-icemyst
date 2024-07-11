@@ -32,7 +32,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@babel/core": "^7.24.7",
+    "@babel/core": "^7.24.8",
     "@babel/preset-env": "^7.24.7",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
