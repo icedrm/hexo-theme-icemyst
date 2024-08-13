@@ -104,3 +104,20 @@ deploy:
   type: git
   repository: git@github.com:icemyst/hexo-theme-icemyst.git
   branch: main
+
+# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+algolia:
+  appId: "HPIBO1JWBQ"
+  apiKey: "c3a39f2c25e2a4951a684e9ab7be359d"
+  adminApiKey: "365d28557620af9f17c1398439b96bb5"
+  chunkSize: 5000
+  indexName: "hexo"
+  fields:
+    - content:strip:truncate,0,200
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title

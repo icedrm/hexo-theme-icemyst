@@ -248,7 +248,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/icemyst
   card_announcement:
     enable: true
     content: This is my Blog
@@ -265,7 +265,7 @@ aside:
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     orderby: random # Order of tags, random/name/length
     order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
     sort_order: # Don't modify the setting unless you know how it works
@@ -377,13 +377,13 @@ katex:
 
 # Algolia search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 6
 
 # Local search
 local_search:
-  enable: true
+  enable: false
   # Preload the search data when the page loads.
   preload: false
   # Show top n results per article, show all results by setting to -1
@@ -749,7 +749,7 @@ beautify:
 font:
   global-font-size: 16px
   code-font-size:
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Lato, Roboto, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
+  font-family:
   code-font-family: Arial,-apple-system,BlinkMacSystemFont,'Microsoft YaHei','Segoe UI','Helvetica Neue',Lato,Roboto,'PingFang SC',sans-serif
 
 # Font settings for the site title and site subtitle

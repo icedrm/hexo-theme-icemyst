@@ -1,0 +1,16 @@
+#category-bar
+  #category-list
+    .category-list-item
+      a(href="/") 首页
+      .category-lists!= list_categories()
+        //- .category-bar-next#category-bar-next(onclick="btf.scrollCategoryBarToRight()")
+          i.fas.fa-angles-right
+      a.category-more(href="/categories/")!= '更多'
+
+script.
+  document.querySelector('.category-lists').addEventListener('wheel', function(event) {
+      if (event.deltaY !== 0) {
+          event.preventDefault();
+          this.scrollLeft += event.deltaY;
+      }
+  });
