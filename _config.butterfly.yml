@@ -243,15 +243,18 @@ aside:
     category: true
   card_author:
     enable: true
-    description:
+    description: <div style="line-height:1.38;margin:0.6rem 0;text-align:center;font-family:fangsong;">到不了的都叫远方，回不去的都叫故乡。</div>
     button:
       enable: true
-      icon: fab fa-github
-      text: Follow Me
-      link: https://github.com/icemyst
+      icon: fas fa-arrow-circle-right
+      text: 了解更多
+      link: /about/
   card_announcement:
     enable: true
-    content: This is my Blog
+    content:
+      - <div><a style='display:flex;height:100%;width:100%;' href='https://hcer.top'><img style="height:100%;width:100%;" src="https://jsd.onmicrosoft.cn/gh/eudav/bingm-static/img/hcer.webp" alt="https://hcer.top" style="border-radius:0;"></a></div>
+        <b>GitHub站点：</b><a href='https://icemyst.github.io'>https://icemyst.github.io</a>
+        <div>CDN赞助者：@xinpro(鸣谢)</div><div>赞助者博客：<a href="https://xinpro.cn">https://xinpro.cn</a></div>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
