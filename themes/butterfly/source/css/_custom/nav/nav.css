@@ -55,7 +55,6 @@
     padding: 0 30px;
     background-color: var(--default-bg-color);
     box-shadow: 0 0 3px var(--default-bg-color);
-    transition: .3s;
     display: none;
 }
 
