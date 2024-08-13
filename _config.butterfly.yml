@@ -1,4 +1,4 @@
-# Navigation bar settings (導航欄設置)
+# Navigation bar settings (导航栏设置)
 # see https://butterfly.js.org/posts/4aa8abbe/##導航欄設置-Navigation-bar-settings
 # --------------------------------------
 
@@ -7,7 +7,7 @@ nav:
   display_title: true
   fixed: true # fixed navigation bar
 
-# Menu 目錄
+# Menu 目录
 menu:
   文 章:
     隧道: /archives/ || fa-fw fas fa-archive
@@ -33,7 +33,7 @@ menu:
     闲言碎语: /essay/ || fas fa-lightbulb
     随便逛逛: javascript:toRandomPost() || fas fa-shoe-prints
 
-# Code Blocks (代碼相關)
+# Code Blocks (代码相关)
 # --------------------------------------
 
 highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
@@ -43,20 +43,20 @@ highlight_shrink: false # true: shrink the code blocks / false: expand the code 
 highlight_height_limit: 300 # unit: px
 code_word_wrap: false
 
-# Social Settings (社交圖標設置)
+# Social Settings (社交图标设置)
 # formal:
 #   icon: link || the description || color
 social:
   # fab fa-github: https://github.com/xxxxx || Github || '#24292e'
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
 
-# Image (圖片設置)
+# Image (图片设置)
 # --------------------------------------
 
-# Favicon（網站圖標）
+# Favicon（网站图标）
 favicon: /img/favicon.ico
 
-# Avatar (頭像)
+# Avatar (头像)
 avatar:
   img: https://q1.qlogo.cn/g?b=qq&nk=1580777927&s=5
   effect: false
@@ -77,7 +77,7 @@ default_top_img:
 archive_img:
 
 # If the banner of tag page not setting, it will show the top_img
-# note: tag page, not tags page (子標籤頁面的 top_img)
+# note: tag page, not tags page (子标签页面的 top_img)
 tag_img:
 
 # The banner image of tag page
@@ -86,7 +86,7 @@ tag_img:
 tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
-# note: category page, not categories page (子分類頁面的 top_img)
+# note: category page, not categories page (子标签页面的 top_img)
 category_img:
 
 # The banner image of category page
@@ -95,18 +95,18 @@ category_img:
 category_per_img:
 
 cover:
-  # display the cover or not (是否顯示文章封面)
+  # display the cover or not (是否显示文章封面)
   index_enable: true
   aside_enable: true
   archives_enable: true
-  # the position of cover in home page (封面顯示的位置)
+  # the position of cover in home page (封面显示的位置)
   # left/right/both
   position: both
-  # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
+  # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
     # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 
-# Replace Broken Images (替換無法顯示的圖片)
+# Replace Broken Images (替换无法显示的图片)
 error_img:
   flink: /img/friend_404.gif
   post_page: /img/404.png
@@ -161,7 +161,7 @@ copy:
 # Post
 # --------------------------------------
 
-# toc (目錄)
+# toc (目录)
 toc:
   post: true
   page: false
@@ -201,16 +201,16 @@ post_edit:
 related_post:
   enable: true
   limit: 6 # Number of posts displayed
-  date_type: created # or created or updated 文章日期顯示創建日或者更新日
+  date_type: created # or created or updated 文章日期显示创建日或者更新日
 
-# post_pagination (分頁)
+# post_pagination (分页)
 # value: 1 || 2 || false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
 post_pagination: 1
 
-# Displays outdated notice for a post (文章過期提醒)
+# Displays outdated notice for a post (文章过期提醒)
 noticeOutdate:
   enable: true
   style: flat # style: simple/flat
@@ -228,7 +228,7 @@ footer:
   custom_text:
   copyright: true # Copyright of theme and framework
 
-# aside (側邊欄)
+# aside (侧边栏)
 # --------------------------------------
 
 aside:
@@ -291,13 +291,13 @@ aside:
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
 # busuanzi count for PV / UV in site
-# 訪問人數
+# 访问人数
 busuanzi:
   site_uv: true
   site_pv: true
   page_pv: true
 
-# Time difference between publish date and now (網頁運行時間)
+# Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
@@ -314,7 +314,7 @@ newest_comments:
 # Bottom right button (右下角按鈕)
 # --------------------------------------
 
-# Conversion between Traditional and Simplified Chinese (簡繁轉換)
+# Conversion between Traditional and Simplified Chinese (简繁转换)
 translate:
   enable: true
   # The text of a button
@@ -328,7 +328,7 @@ translate:
   # The text of the button when the language is Traditional Chinese
   msgToSimplifiedChinese: '簡'
 
-# Read Mode (閲讀模式)
+# Read Mode (阅读模式)
 readmode: true
 
 # dark mode
@@ -336,7 +336,7 @@ darkmode:
   enable: true
   # Toggle Button to switch dark/light mode
   button: true
-  # Switch dark/light mode automatically (自動切換 dark mode和 light mode)
+  # Switch dark/light mode automatically (自动切换 dark mode和 light mode)
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
@@ -348,20 +348,20 @@ darkmode:
 # show scroll percent in scroll-to-top button
 rightside_scroll_percent: true
 
-# Don't modify the following settings unless you know how they work (非必要請不要修改 )
+# Don't modify the following settings unless you know how they work (非必要请不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
-# Don't repeat 不要重複
+# Don't repeat 不要重复
 rightside_item_order:
   enable: false
   hide: # readmode,translate,darkmode,hideAside
   show: # toc,chat,comment
 
-# Math (數學)
+# Math (数学)
 # --------------------------------------
 # About the per_page
-# if you set it to true, it will load mathjax/katex script in each page (true 表示每一頁都加載js)
+# if you set it to true, it will load mathjax/katex script in each page (true 表示每一页都加载js)
 # if you set it to false, it will load mathjax/katex script according to your setting (add the 'mathjax: true' in page's front-matter)
-# (false 需要時加載，須在使用的 Markdown Front-matter 加上 mathjax: true)
+# (false 需要时加载，须在使用的 Markdown Front-matter 加上 mathjax: true)
 
 # MathJax
 mathjax:
@@ -439,7 +439,7 @@ disqus:
   apikey: # For newest comments widget
 
 # Alternative Disqus - Render comments with Disqus API
-# DisqusJS 評論系統，可以實現在網路審查地區載入 Disqus 評論列表，兼容原版
+# DisqusJS 评论系统，可以实现在网路审查地区载入 Disqus 评论列表，兼容原版
 # https://github.com/SukkaW/DisqusJS
 disqusjs:
   shortname:
@@ -596,7 +596,7 @@ microsoft_clarity:
 # Advertisement
 # --------------------------------------
 
-# Google Adsense (谷歌廣告)
+# Google Adsense (谷歌广告)
 google_adsense:
   enable: false
   auto_ads: true
@@ -604,13 +604,13 @@ google_adsense:
   client:
   enable_page_level_ads: true
 
-# Insert ads manually (手動插入廣告)
+# Insert ads manually (手动插入广告)
 # ad:
 #   index:
 #   aside:
 #   post:
 
-# Verification (站長驗證)
+# Verification (站长验证)
 # --------------------------------------
 
 site_verification:
@@ -644,23 +644,23 @@ site_verification:
 #   meta_theme_color_dark: "#0d0d0d"
 
 # The top_img settings of home page
-# default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
-# The position of site info, eg: 300px/300em/300rem/10% (主頁標題距離頂部距離)
+# default: top img - full screen, site info - middle (默认top_img全屏，site_info在中间)
+# The position of site info, eg: 300px/300em/300rem/10% (主页标题距离顶部距离)
 index_site_info_top:
-# The height of top_img, eg: 300px/300em/300rem (主頁top_img高度)
+# The height of top_img, eg: 300px/300em/300rem (主页top_img高度)
 index_top_img_height:
 
-# The user interface setting of category and tag page (category和tag頁的UI設置)
-# index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
-# default - same as archives UI 默認跟archives頁面UI一樣
+# The user interface setting of category and tag page (category和tag页的UI设置)
+# index - same as Homepage UI (index 值代表 UI將与首页的UI一样)
+# default - same as archives UI 默认跟archives页面UI一样
 category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
-# Stretches the lines so that each line has equal width（文字向兩側對齊，對最後一行無效）
+# Stretches the lines so that each line has equal width（文字向两侧对齐，对最后一行无效）
 text_align_justify: true
 
-# Website Background (設置網站背景)
-# can set it to color or image (可設置圖片 或者 顔色)
+# Website Background (设置网站背景)
+# can set it to color or image (可设置图片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 background:
 
@@ -672,10 +672,10 @@ mask:
   header: true
   footer: true
 
-# the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
+# the position of bottom right button/default unit: px (右下角按钮距离底部的距离/默认单位为px)
 rightside_bottom:
 
-# Enter transitions (開啓網頁進入效果)
+# Enter transitions (开启网页进入效果)
 enter_transitions: true
 
 # Typewriter Effect (打字效果)
@@ -683,13 +683,13 @@ enter_transitions: true
 activate_power_mode:
   enable: false
   colorful: true # open particle animation (冒光特效)
-  shake: true #  open shake (抖動特效)
+  shake: true #  open shake (抖动特效)
   mobile: false
 
 # Background effects (背景特效)
 # --------------------------------------
 
-# canvas_ribbon (靜止彩帶背景)
+# canvas_ribbon (静止彩带背景)
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
   enable: false
@@ -699,7 +699,7 @@ canvas_ribbon:
   click_to_change: false
   mobile: false
 
-# Fluttering Ribbon (動態彩帶)
+# Fluttering Ribbon (动态彩帶)
 canvas_fluttering_ribbon:
   enable: false
   mobile: false
@@ -714,18 +714,18 @@ canvas_nest:
   count: 99 # the number of lines, default: 99.
   mobile: false
 
-# Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
+# Mouse click effects: fireworks (鼠标点击效果: 烟火特效)
 fireworks:
   enable: false
   zIndex: 9999 # -1 or 9999
   mobile: false
 
-# Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)
+# Mouse click effects: Heart symbol (鼠标点击效果: 愛心)
 click_heart:
   enable: false
   mobile: false
 
-# Mouse click effects: words (鼠標點擊效果: 文字)
+# Mouse click effects: words (鼠标点击效果: 文字)
 clickShowText:
   enable: false
   text:
@@ -736,11 +736,11 @@ clickShowText:
   random: false
   mobile: false
 
-# Default display mode (網站默認的顯示模式)
+# Default display mode (网站默认的显示模式)
 # light (default) / dark
 display_mode: light
 
-# Beautify (美化頁面顯示)
+# Beautify (美化页面显示)
 beautify:
   enable: false
   field: post # site/post
@@ -756,18 +756,19 @@ font:
   code-font-family: Arial,-apple-system,BlinkMacSystemFont,'Microsoft YaHei','Segoe UI','Helvetica Neue',Lato,Roboto,'PingFang SC',sans-serif
 
 # Font settings for the site title and site subtitle
-# 左上角網站名字 主頁居中網站名字
+# 左上角网站名字 主頁居中网站名字
 blog_title_font:
   font_link:
   font-family: Arial,PingFang SC, 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif
 
-# The setting of divider icon (水平分隔線圖標設置)
+# The setting of divider icon (水平分隔线图标设置)
 hr_icon:
   enable: true
   icon: # the unicode value of Font Awesome icon, such as '\3423'
   icon-top:
 
-# the subtitle on homepage (主頁subtitle)
+
+# the subtitle on homepage (主页subtitle)
 subtitle:
   enable: false
   # Typewriter Effect (打字效果)
@@ -775,17 +776,17 @@ subtitle:
   # Customize typed.js (配置typed.js)
   # https://github.com/mattboldt/typed.js/#customization
   typed_option:
-  # source 調用第三方服務
-  # source: false 關閉調用
-  # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 2  調用一句網（簡體） https://yijuzhan.com/
-  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
-  # subtitle 會先顯示 source , 再顯示 sub 的內容
+  # source 调用第三方服务
+  # source: false 关闭调用
+  # source: 1  调用一言网的一句话（简体） https://hitokoto.cn/
+  # source: 2  调用一句网（简体） https://yijuzhan.com/
+  # source: 3  调用今日诗词（简体） https://www.jinrishici.com/
+  # subtitle 会先显示 source , 再显示 sub 的内容
   source: false
-  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
+  # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
   sub:
 
-# Loading Animation (加載動畫)
+# Loading Animation (加载动画)
 preloader:
   enable: true
   # source
@@ -795,7 +796,7 @@ preloader:
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url: https://unpkg.com/plasx@1.0.3/css/progress_bar.css
 
-# wordcount (字數統計)
+# wordcount (字数统计)
 # see https://butterfly.js.org/posts/ceeb73f/#字數統計
 wordcount:
   enable: true
@@ -803,9 +804,9 @@ wordcount:
   min2read: true
   total_wordcount: true
 
-# Lightbox (圖片大圖查看模式)
+# Lightbox (图片大图查看模式)
 # --------------------------------------
-# You can only choose one, or neither (只能選擇一個 或者 兩個都不選)
+# You can only choose one, or neither (只能选择一个 或者 两个都不选)
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
@@ -815,7 +816,7 @@ medium_zoom: false
 # https://fancyapps.com/fancybox/
 fancybox: true
 
-# Tag Plugins settings (標籤外掛)
+# Tag Plugins settings (标签外挂)
 # --------------------------------------
 
 # series (系列文章)
@@ -825,7 +826,7 @@ series:
   order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
   number: true
 
-# abcjs (樂譜渲染)
+# abcjs (乐谱渲染)
 # See https://github.com/paulrosen/abcjs
 abcjs:
   enable: false
@@ -871,10 +872,10 @@ aplayerInject:
   enable: false
   per_page: true
 
-# Snackbar (Toast Notification 彈窗)
+# Snackbar (Toast Notification 弹窗)
 # https://github.com/polonel/SnackBar
-# position 彈窗位置
-# 可選 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+# position 弹窗位置
+# 可选 top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
 snackbar:
   enable: false
   position: bottom-left
@@ -882,11 +883,11 @@ snackbar:
   bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
 
 # https://instant.page/
-# prefetch (預加載)
+# prefetch (预加载)
 instantpage: true
 
 # https://github.com/vinta/pangu.js
-# Insert a space between Chinese character and English character (中英文之間添加空格)
+# Insert a space between Chinese character and English character (中英文之间添加空格)
 pangu:
   enable: true
   field: site # site/post
@@ -938,7 +939,7 @@ inject:
 
 # CDN
 # Don't modify the following settings unless you know how they work
-# 非必要請不要修改
+# 非必要请不要修改
 CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/elemecdn/jsdelivr/unpkg/cdnjs/custom/anheyu
