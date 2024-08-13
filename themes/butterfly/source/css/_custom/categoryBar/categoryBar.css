@@ -9,6 +9,11 @@
     white-space: nowrap;
 }
 
+#category-bar:hover {
+    border: 1px solid #49b1f5;
+    box-shadow: var(--card-box-shadow);
+}
+
 #category-bar #category-list {
     display: flex;
     align-items: center;
