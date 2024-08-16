@@ -82,7 +82,7 @@
     display: flex;
 }
 
-.nav-fixed.nav-visible #name-container {
+/* .nav-fixed.nav-visible #name-container {
     transition: .3s;
     transform: translate(-50%, 60px);
 }
@@ -90,7 +90,7 @@
 .nav-fixed.nav-visible #menus .menus_items {
     transform: translate(-50%);
     transition: .3s;
-}
+} */
 
 .nav-fixed #menus .menus_items {
     transform: translate(-50%, -60px);
