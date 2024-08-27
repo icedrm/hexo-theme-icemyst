@@ -12,7 +12,7 @@
 
 #nav .site-name::before {
     display: none;
-    background-color: var(--default-bg-color) !important;
+    background: var(--default-bg-color) !important;
     border-radius: 50px;
     position: absolute;
     padding: 0 28px;
@@ -63,7 +63,7 @@
 }
 
 #name-container:hover {
-    /* scale: 1.03 */
+    /* scale: 1.03; */
     transform: translateX(-50%) scale(1.03);
     transition: .3s;
 }
@@ -71,7 +71,6 @@
 #name-container {
     position: absolute;
     left: 50%;
-    /* transform: translateX(-50%); */
     transform: translate(-50%, 60px);
 }
 
@@ -82,25 +81,19 @@
     display: flex;
 }
 
-/* .nav-fixed.nav-visible #name-container {
-    transition: .3s;
+
+.nav-fixed.nav-visible #name-container {
     transform: translate(-50%, 60px);
-}
-
-.nav-fixed.nav-visible #menus .menus_items {
-    transform: translate(-50%);
-    transition: .3s;
-} */
-
-.nav-fixed #menus .menus_items {
-    transform: translate(-50%, -60px);
     transition: .3s;
 }
 
+.nav-fixed.nav-visible #menus .menus_items,
 .nav-fixed #name-container {
     transform: translate(-50%);
     transition: .3s;
 }
+
+.nav-fixed #menus .menus_items,
 .nav-fixed #page-header {
     transform: translate(-50%, -60px);
     transition: .3s;
