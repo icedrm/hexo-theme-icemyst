@@ -12,8 +12,8 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
       !=partial('includes/loading/index', {}, {cache: true})
 
     if theme.background
-      #web_bg
-      
+      #web_bg(style=`background:url(${page.background || theme.background});background-attachment: local;background-position: center;background-size: cover;background-repeat: no-repeat;`)
+
     !=partial('includes/sidebar', {}, {cache: true})
 
     if page.type !== '404'

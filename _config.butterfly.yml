@@ -662,7 +662,7 @@ text_align_justify: true
 # Website Background (设置网站背景)
 # can set it to color or image (可设置图片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: # url(https://api.boxmoe.com/random.php?size=large)
 
 # Footer Background
 footer_bg: transparent
