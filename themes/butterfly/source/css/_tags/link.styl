@@ -3,61 +3,60 @@
     text-align center
   a
     &.link-card
+      display flex;
+      flex-direction column
       margin 0.25rem auto
-      background #f6f6f6
-      display inline-flex
-      align-items center
+      background var(--dark-grey)
       cursor pointer
       text-align center
       min-width 200px
-      max-width 361px
-      color #444
+      max-width 300px
+      color var(--text-highlight-color)
       border-radius 12px
       text-decoration none
+      padding .25rem .5rem
+      .link-group
+        position relative
+        display flex
+        align-items center
       &:hover
+        color var(--white)
+        background var(--default-bg-color)
         box-shadow 0 4px 8px 0 rgba(0, 0, 0, 0.1)
       div
         &.left
           width 48px
           height 48px
-          margin 12px
+          margin 5px 0
           overflow hidden
           flex-shrink 0
           position relative
-          i
-            font-size 32px
-            line-height 48px
-            margin-left 4px
-          img
-            display block
-            position absolute
-            border-radius 2px
-            top 50%
-            left 50%
-            transform translate(-50%, -50%)
+          border-radius 12px
         &.right
           overflow hidden
-          margin-right 12px
-      p
-        margin 0
-        &.text
-          font-weight bold
-        &.url
-          flex-shrink 0
-          color rgba(68, 68, 68, 0.65)
-          font-size 13px
+          margin-left .5rem
+          .title,
+          .text
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+            display flex
+          .title
+            font-size 1rem
+            font-weight bold
+          .text
+            font-size .7rem
+            font-weight 400
+        i
+          display flex
+          position absolute
+          right 4px
 
-@media screen and (max-width: 425px)
-  #article-container
-    a
-      &.link-card
-        max-width 100%
-
-@media screen and (max-width: 375px)
-  #article-container
-    a
-      &.link-card
-        width 100%
+    .tips
+      display flex
+      border-bottom 1px solid var(--toc-link-color)
+      font-size .6rem
+      font-weight 400
 
 #article-container a.link-card div.left,
 #article-container a.link-card div.right
@@ -68,5 +67,3 @@
     a
       &.link-card
         filter brightness(0.7)
-        img
-          filter brightness(1)
