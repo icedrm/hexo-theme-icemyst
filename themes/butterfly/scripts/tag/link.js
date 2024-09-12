@@ -23,7 +23,7 @@ function link(args) {
   return `<div class='tag link'><a class="link-card" target="_blank" href="${urlFor(link)}">
     <div class="tips">${InsideStation ? "站内地址" : "引用站外地址"}</div>
     <div class="link-group">
-        <div class="left" style="background: url(${InsideStation ? "/img/siteicon/android-chrome-512x512.png" : imgUrl});"></div>
+        <div class="left" style="background-image: url(${InsideStation ? "/img/siteicon/android-chrome-512x512.png" : imgUrl});"></div>
         <div class="right">
             <div class="title">${title}</div>
             <div class="text">${text}</div>
