@@ -1,28 +1,24 @@
 #article-container
   .tag.link
-    text-align center
+    background var(--guest-background-color)
+    border-radius 12px
+    min-width 200px
+    max-width 300px
+    margin 0.25rem auto
+    padding .25rem .5rem
+    &:hover
+      background var(--referto-text-hover-color)
+      box-shadow 0 4px 8px 0 rgba(0, 0, 0, 0.1)
+      a
+        color var(--white)
   a
     &.link-card
-      display flex;
-      flex-direction column
-      margin 0.25rem auto
-      background var(--dark-grey)
-      cursor pointer
-      text-align center
-      min-width 200px
-      max-width 300px
-      color var(--text-highlight-color)
-      border-radius 12px
       text-decoration none
-      padding .25rem .5rem
+      color var(--text-highlight-color)
       .link-group
         position relative
         display flex
         align-items center
-      &:hover
-        color var(--white)
-        background var(--default-bg-color)
-        box-shadow 0 4px 8px 0 rgba(0, 0, 0, 0.1)
       div
         &.left
           width 48px
@@ -41,7 +37,6 @@
             overflow hidden
             text-overflow ellipsis
             white-space nowrap
-            display flex
           .title
             font-size 1rem
             font-weight bold
@@ -52,10 +47,9 @@
           display flex
           position absolute
           right 4px
-
     .tips
       display flex
-      border-bottom 1px solid var(--toc-link-color)
+      border-bottom 1px solid var(--text-highlight-color)
       font-size .6rem
       font-weight 400
 
