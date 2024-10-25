@@ -934,13 +934,12 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    # - <script async src="https://npm.elemecdn.com/akiblog@1.0.2/js/custom/carousel-touch.js"></script> #carousel相册鼠标动作的依赖
-    - <script async src="/js/custom/carousel-touch.js"></script> #carousel相册鼠标动作的依赖
   bottom:
-    # 页脚蝴蝶图标
-    # - <script async src="//at.alicdn.com/t/font_2032782_8ns648avijk.js"></script>
+    # 统计图
+    - <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.min.js"></script>
+    #旋转相册鼠标动作的依赖
+    - <script async src="https://npm.elemecdn.com/akiblog@1.0.2/js/custom/carousel-touch.js"></script>
 
-# CDN
 # Don't modify the following settings unless you know how they work
 # 非必要请不要修改
 CDN:
