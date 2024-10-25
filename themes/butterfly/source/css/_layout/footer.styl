@@ -10,7 +10,6 @@
       position: absolute
       width: 100%
       height: 100%
-      background-color: var(--mark-bg)
       content: ''
 
 #footer-wrap
@@ -18,7 +17,12 @@
   padding: 40px 20px
   color: var(--light-grey)
   text-align: center
-
+  .copyright
+    span
+      display:inline-flex
+      vertical-align: super
+    svg
+      animation:butterfly 1.5s linear infinite alternate
   a
     color: var(--light-grey)
 
@@ -33,3 +37,12 @@
     max-height: 1.4em
     width: auto
     vertical-align: text-bottom
+
+@keyframes butterfly {
+  from {
+    transform:rotateY(70deg)
+  }
+  to {
+    transform:rotateY(0deg)
+  }
+}
