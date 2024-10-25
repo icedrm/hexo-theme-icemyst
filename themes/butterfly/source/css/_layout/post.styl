@@ -70,7 +70,9 @@ beautify()
     @extend .custom-hr
 
 #article-container
-  padding: 0 50px 40px
+  width: calc(100% - 28px)
+  margin: 0 auto
+  padding: 0 18px
   word-wrap: break-word
   overflow-wrap: break-word
 
@@ -161,10 +163,14 @@ beautify()
 
 #post
   .tag_share
+    margin 20px 30px
     &:after
       display: block
       clear: both
       content: ''
+    
+    +maxWidth768()
+      margin 20px 0
 
     .post-meta
       &__tag-list
@@ -203,10 +209,13 @@ beautify()
 
   .post-copyright
     position: relative
-    margin: 40px 0 10px
+    margin: 20px 30px 10px
     padding: 10px 16px
     border: 1px solid var(--light-grey)
     transition: box-shadow .3s ease-in-out
+
+    +maxWidth768()
+      margin: 20px 10px 0
 
     &:before
       @extend .fontawesomeIcon
