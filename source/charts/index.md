@@ -1,5 +1,6 @@
 ---
 aside: false
+comments: false
 ---
 
 <!-- <script src="https://unpkg.com/echarts@5.5.1/dist/echarts.min.js"></script> -->
