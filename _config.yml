@@ -121,3 +121,36 @@ algolia:
     - slug
     - tags
     - title
+
+# 追番插件
+# https://github.com/HCLonely/hexo-bilibili-bangumi
+bangumi: # 追番设置
+  enable: true
+  path:
+  vmid: 62815361
+  title:
+  quote: '生命不息，追番不止！'
+  show: 1
+  lazyload: false
+  loading:
+  metaColor:
+  color:
+  webp:
+  progress:
+  extra_options:
+    key: value
+cinema: # 追剧设置
+  enable: false
+  path:
+  vmid: 62815361
+  title: '追剧列表'
+  quote: '生命不息，追剧不止！'
+  show: 1
+  lazyload: true
+  loading:
+  metaColor:
+  color:
+  webp:
+  progress:
+  extra_options:
+    key: value

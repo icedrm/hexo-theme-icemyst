@@ -53,7 +53,7 @@ jobs:
         hexo clean
         # hexo bangumi -u #bilibili番剧更新
         hexo generate
-        # hexo algolia
+        hexo algolia
         # npx pwa-asset-generator ./public/img/siteicon/android-chrome-512x512.png ./public/img/siteicon --padding "calc(50vh - 20%) calc(50vw - 40%)" -s false -h true
         gulp
 
