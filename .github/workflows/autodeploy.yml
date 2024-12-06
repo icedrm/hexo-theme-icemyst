@@ -1,10 +1,10 @@
-# 当有改动推送到master分支时，启动Action
+# 当有改动推送到main分支时，启动Action
 name: 自动部署
 
 on:
   push:
     branches:
-      - master
+      - main
 
   release:
     types:
@@ -23,7 +23,7 @@ jobs:
     - name: 检查分支
       uses: actions/checkout@v4
       with:
-        ref: master
+        ref: main
 
     - name: 安装 Node
       uses: actions/setup-node@v4
@@ -65,6 +65,6 @@ jobs:
         git config --global user.email '${{ secrets.GITHUBEMAIL }}'
         git add .
         git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
-        git push --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io.git" master:master
-        # git push --force --quiet "https://${{ secrets.TOKENUSER }}:${{ secrets.CODINGTOKEN }}@e.coding.net/${{ secrets.CODINGUSERNAME }}/${{  secrets.CODINGBLOGREPO }}.git" master:master #coding部署写法，需要的自行取消注释
-        # git push --force --quiet "https://${{ secrets.GITEEUSERNAME }}:${{ secrets.GITEETOKEN }}@gitee.com/${{ secrets.GITEEUSERNAME }}/${{ secrets.GITEEUSERNAME }}.git" master:master # gitee部署写法，需要的自行取消注释
+        git push --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io.git" main:main
+        # git push --force --quiet "https://${{ secrets.TOKENUSER }}:${{ secrets.CODINGTOKEN }}@e.coding.net/${{ secrets.CODINGUSERNAME }}/${{  secrets.CODINGBLOGREPO }}.git" main:main #coding部署写法，需要的自行取消注释
+        # git push --force --quiet "https://${{ secrets.GITEEUSERNAME }}:${{ secrets.GITEETOKEN }}@gitee.com/${{ secrets.GITEEUSERNAME }}/${{ secrets.GITEEUSERNAME }}.git" main:main # gitee部署写法，需要的自行取消注释
