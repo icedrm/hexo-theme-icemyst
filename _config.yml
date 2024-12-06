@@ -102,7 +102,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: git@github.com:icemyst/hexo-theme-icemyst.git
+  repository: git@github.com:icedrm/icedrm.github.io.git
   branch: main
 
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
