@@ -107,9 +107,9 @@ deploy:
 
 # algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:
-  appId: "HPIBO1JWBQ"
-  apiKey: "c3a39f2c25e2a4951a684e9ab7be359d"
-  adminApiKey: "365d28557620af9f17c1398439b96bb5"
+  appId: "ISDJ00QU43"
+  apiKey: "487b1ffc0003ed6c3522ba6747b1d1e9"
+  adminApiKey: "0440712e501ea61ec6b9f9ea156798d7"
   chunkSize: 5000
   indexName: "hexo"
   fields:
