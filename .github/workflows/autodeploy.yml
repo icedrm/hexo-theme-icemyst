@@ -1,0 +1,70 @@
+# 当有改动推送到master分支时，启动Action
+name: 自动部署
+
+on:
+  push:
+    branches:
+      - master
+
+  release:
+    types:
+      - published
+
+
+jobs:
+  deploy:
+    name: Deploy Public To Pages
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+      # ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+
+    steps:
+    - name: 检查分支
+      uses: actions/checkout@v4
+      with:
+        ref: master
+
+    - name: 安装 Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20.x"
+        registry-url: https://registry.npmjs.org/
+
+    - name: 安装 Hexo
+      run: |
+        export TZ='Asia/Shanghai'
+        npm install hexo-cli -g
+
+    - name: 缓存 Hexo
+      uses: actions/cache@v4
+      id: cache
+      with:
+        path: node_modules
+        key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+
+    - name: 安装依赖
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        npm install --save
+
+    - name: 生成静态文件
+      run: |
+        hexo clean
+        # hexo bangumi -u #bilibili番剧更新
+        hexo generate
+        # hexo algolia
+        # npx pwa-asset-generator ./public/img/siteicon/android-chrome-512x512.png ./public/img/siteicon --padding "calc(50vh - 20%) calc(50vw - 40%)" -s false -h true
+        gulp
+
+    - name: 部署
+      run: |
+        cd ./public
+        git init
+        git config --global user.name '${{ secrets.GITHUBUSERNAME }}'
+        git config --global user.email '${{ secrets.GITHUBEMAIL }}'
+        git add .
+        git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+        git push --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io.git" master:master
+        # git push --force --quiet "https://${{ secrets.TOKENUSER }}:${{ secrets.CODINGTOKEN }}@e.coding.net/${{ secrets.CODINGUSERNAME }}/${{  secrets.CODINGBLOGREPO }}.git" master:master #coding部署写法，需要的自行取消注释
+        # git push --force --quiet "https://${{ secrets.GITEEUSERNAME }}:${{ secrets.GITEETOKEN }}@gitee.com/${{ secrets.GITEEUSERNAME }}/${{ secrets.GITEEUSERNAME }}.git" master:master # gitee部署写法，需要的自行取消注释
