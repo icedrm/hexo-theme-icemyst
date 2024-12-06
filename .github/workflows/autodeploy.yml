@@ -10,10 +10,9 @@ on:
     types:
       - published
 
-
 jobs:
   deploy:
-    name: Deploy Public To Pages
+    name: Deploy to Another GitHub Repo
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
@@ -57,7 +56,13 @@ jobs:
         # npx pwa-asset-generator ./public/img/siteicon/android-chrome-512x512.png ./public/img/siteicon --padding "calc(50vh - 20%) calc(50vw - 40%)" -s false -h true
         gulp
 
-    - name: 部署
+    - name: 输出当前 Git 状态
+      run: |
+        git status
+        git log --oneline -n 5
+        git remote -v
+
+    - name: 部署到目标仓库的 main 分支
       run: |
         cd ./public
         git init
@@ -65,6 +70,6 @@ jobs:
         git config --global user.email '${{ secrets.GITHUBEMAIL }}'
         git add .
         git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
-        git push --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io.git" main:main
+        git push -v --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/${{ secrets.GITHUBUSERNAME }}/${{ secrets.GITHUBUSERNAME }}.github.io.git" main:main
         # git push --force --quiet "https://${{ secrets.TOKENUSER }}:${{ secrets.CODINGTOKEN }}@e.coding.net/${{ secrets.CODINGUSERNAME }}/${{  secrets.CODINGBLOGREPO }}.git" main:main #coding部署写法，需要的自行取消注释
         # git push --force --quiet "https://${{ secrets.GITEEUSERNAME }}:${{ secrets.GITEETOKEN }}@gitee.com/${{ secrets.GITEEUSERNAME }}/${{ secrets.GITEEUSERNAME }}.git" main:main # gitee部署写法，需要的自行取消注释
